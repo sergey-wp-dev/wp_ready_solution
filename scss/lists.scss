@@ -1,0 +1,28 @@
+// list with counter
+ul{
+	&.list{
+		&-counter{
+			margin-left: 1rem;
+			list-style-type: none;
+			li{
+				position: relative;
+				margin-bottom: 1.625rem;
+				counter-increment: steps-list-counter;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				&:before{
+					content: counter(steps-list-counter);
+					position: absolute;
+					width: 14px;
+					height: 14px;
+					left: -20px;
+					top: 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
