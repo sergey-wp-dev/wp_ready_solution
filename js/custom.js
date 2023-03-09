@@ -130,4 +130,14 @@
 		}
 	});
 
+	// add padding top and color styles is equal Element height on mobile view on page
+	if ($('.class').length > 0) {
+		let mql = window.matchMedia('(max-width: 767px)');
+		if (mql) {
+			let $h1ElementHeight = $("class").css('height');
+				$('class').closest('class').find('class').css('padding-top', $h1ElementHeight);
+				$('class').css('color', '#192944');
+		}
+	}
+
  })(jQuery);
